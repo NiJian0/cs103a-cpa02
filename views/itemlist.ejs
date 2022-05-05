@@ -1,0 +1,24 @@
+<% if (items.length>0) {%>
+<h1>The schedules on <%=items[0].calendar %> are</h1>
+Here is an ol list with all the things <%= user['username'] %> have done on <%=items[0].calendar %>
+<% }%>
+<hr>
+
+<ol>
+    <%for (item of items){%>
+        <li class="mb-2">
+            <%= item.time %><br>          
+            <b><%= item.title%>:</b><i><%= item.description %></i>
+            <% if (item.completed) {%>
+                
+                <a href="/todo/completed/false/<%= item._id%>"> Done</a>
+            <% } else {%>
+                <a href="/todo/completed/true/<%= item._id%>"> In Process</a>
+            <% } %>
+            <br>
+            <%= item.createdAt %> 
+            <a href="/todo/delete/<%= item._id%>">(delete)</a>
+        </li>
+    <% }%>
+</ol>
+<hr>
