@@ -1,7 +1,7 @@
 # CS103a Express App Demo
+# Daily Schedule App
 
-This is a starter project which has a simple authentication module 
-and provides access to a mongoose database in the cloud.
+This app is built based on the ToDoItem module and is used for recording our daily life like a dairy in the list form. Users can add items with the time, title, description and can searche a list of items on a specific day.
 
 ## Installation
 Download the project from github and download nodejs and npm from https://nodejs.org
